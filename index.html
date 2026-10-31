@@ -12,10 +12,10 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8rem}
 </head>
 <body>
 <h1>Datenschutzerklärung für die App „KronenManager“</h1>
-<p>Stand: 31.10.2026 (ergänzt um den eingebauten WireGuard-Tunnel)</p>
+<p>Stand: 31.10.2026 (ergänzt um den eingebauten WireGuard-Tunnel und den Zugriff auf Dateien des Handys)</p>
 
 <h2>1. Worum es geht</h2>
-<p>KronenManager ist ein privater Dateimanager für ein eigenes NAS (Netzwerkspeicher) über das SMB-Protokoll. Die App wird nur innerhalb einer Familie genutzt und ist nicht öffentlich im Play Store auffindbar.</p>
+<p>KronenManager ist ein privater Dateimanager für die Dateien auf dem Handy und für ein eigenes NAS (Netzwerkspeicher) über das SMB-Protokoll. Die App wird nur innerhalb einer Familie genutzt und ist nicht öffentlich im Play Store auffindbar.</p>
 
 <h2>2. Verantwortlicher und Kontakt</h2>
 <p>Verantwortlich ist der im Google Play Store angegebene Entwickler der App. Kontakt: <a href="mailto:martin.koedderitzsch@googlemail.com">martin.koedderitzsch@googlemail.com</a></p>
@@ -32,6 +32,7 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8rem}
 
 <h2>5. Berechtigungen</h2>
 <ul>
+<li><strong>Zugriff auf alle Dateien</strong> (optional): Damit zeigt die App wie ein Dateimanager die Ordner und Dateien auf Ihrem Handy an und kopiert oder verschiebt sie auf Ihren Wunsch zwischen Handy und NAS. Die App liest, ändert oder löscht Dateien nur, wenn Sie das in der App auslösen. Dateiinhalte und Dateinamen werden nicht ausgewertet und nicht an den Entwickler oder Dritte übertragen, sondern nur zu Ihrem eigenen NAS, wenn Sie Dateien dorthin kopieren.</li>
 <li><strong>Standort (genau)</strong>: Android gibt den Namen des verbundenen WLANs nur mit dieser Berechtigung heraus. Die App liest damit ausschließlich den WLAN-Namen, um zu erkennen, ob Sie im Heimnetz sind. Ihr Standort wird nicht ermittelt, gespeichert oder übertragen. Die Berechtigung ist optional.</li>
 <li><strong>Netzwerkzugriff und Netzwerkstatus</strong>: für die Verbindung zum NAS und zur Erkennung, ob ein VPN aktiv ist.</li>
 <li><strong>VPN (eingebauter WireGuard-Tunnel)</strong>: Ist das NAS nicht direkt erreichbar, baut die App mit Ihrer Erlaubnis einen WireGuard-Tunnel zu Ihrem eigenen Router auf. Durch diesen Tunnel läuft ausschließlich der Datenverkehr von KronenManager, nicht der anderer Apps. Der Datenverkehr wird dabei weder ausgewertet noch gespeichert noch an Dritte weitergegeben. Die App baut den Tunnel einige Minuten nach dem Verlassen wieder ab.</li>
