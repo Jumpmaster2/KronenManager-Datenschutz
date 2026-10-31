@@ -12,7 +12,7 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8rem}
 </head>
 <body>
 <h1>Datenschutzerklärung für die App „KronenManager“</h1>
-<p>Stand: 31.10.2026</p>
+<p>Stand: 31.10.2026 (ergänzt um den eingebauten WireGuard-Tunnel)</p>
 
 <h2>1. Worum es geht</h2>
 <p>KronenManager ist ein privater Dateimanager für ein eigenes NAS (Netzwerkspeicher) über das SMB-Protokoll. Die App wird nur innerhalb einer Familie genutzt und ist nicht öffentlich im Play Store auffindbar.</p>
@@ -21,11 +21,11 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8rem}
 <p>Verantwortlich ist der im Google Play Store angegebene Entwickler der App. Kontakt: <a href="mailto:martin.koedderitzsch@googlemail.com">martin.koedderitzsch@googlemail.com</a></p>
 
 <h2>3. Keine Datenübermittlung an den Entwickler</h2>
-<p>Die App erhebt keine Daten für den Entwickler und überträgt keine Daten an den Entwickler oder an Dritte. Sie enthält keine Werbung, keine Analyse- oder Absturzberichts-Dienste und keine Tracking-Bibliotheken. Netzwerkverbindungen baut die App ausschließlich zu dem NAS auf, das Sie selbst in den Einstellungen eintragen.</p>
+<p>Die App erhebt keine Daten für den Entwickler und überträgt keine Daten an den Entwickler oder an Dritte. Sie enthält keine Werbung, keine Analyse- oder Absturzberichts-Dienste und keine Tracking-Bibliotheken. Netzwerkverbindungen baut die App ausschließlich zu dem NAS auf, das Sie selbst in den Einstellungen eintragen, und – wenn Sie den eingebauten Tunnel nutzen – zu dem WireGuard-Server in Ihrem eigenen Router, den Ihre Konfigurationsdatei angibt.</p>
 
 <h2>4. Daten, die nur auf Ihrem Gerät gespeichert werden</h2>
 <ul>
-<li><strong>Zugangsdaten und Einstellungen</strong> (NAS-Adresse, Benutzername, Passwort, Name des Heim-WLANs, Name des WireGuard-Tunnels): verschlüsselt mit einem Schlüssel im Android-Keystore, nur auf Ihrem Gerät. Sie werden ausschließlich zur Anmeldung an Ihrem NAS verwendet. Eine Sicherung über Android-Backups ist abgeschaltet.</li>
+<li><strong>Zugangsdaten und Einstellungen</strong> (NAS-Adresse, Benutzername, Passwort, Name des Heim-WLANs, Name des WireGuard-Tunnels bzw. die importierte WireGuard-Konfiguration mit ihren Schlüsseln): verschlüsselt mit einem Schlüssel im Android-Keystore, nur auf Ihrem Gerät. Sie werden ausschließlich zur Anmeldung an Ihrem NAS verwendet. Eine Sicherung über Android-Backups ist abgeschaltet.</li>
 <li><strong>Dateien</strong>: Geöffnete Dateien werden vorübergehend im App-Cache abgelegt und beim nächsten Start gelöscht. Heruntergeladene Dateien speichert die App auf Ihren Wunsch im Ordner „Download/KronenManager“. Vorschaubilder werden nur im Arbeitsspeicher gehalten.</li>
 </ul>
 <p>Über „Alle Einstellungen löschen“ in der App oder durch Deinstallation entfernen Sie diese Daten vollständig.</p>
@@ -34,7 +34,8 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8rem}
 <ul>
 <li><strong>Standort (genau)</strong>: Android gibt den Namen des verbundenen WLANs nur mit dieser Berechtigung heraus. Die App liest damit ausschließlich den WLAN-Namen, um zu erkennen, ob Sie im Heimnetz sind. Ihr Standort wird nicht ermittelt, gespeichert oder übertragen. Die Berechtigung ist optional.</li>
 <li><strong>Netzwerkzugriff und Netzwerkstatus</strong>: für die Verbindung zum NAS und zur Erkennung, ob ein VPN aktiv ist.</li>
-<li><strong>Steuerung von WireGuard-Tunneln</strong>: Die App bittet die separat installierte WireGuard-App, Ihren eingestellten Tunnel ein- oder auszuschalten, wenn das NAS anders nicht erreichbar ist.</li>
+<li><strong>VPN (eingebauter WireGuard-Tunnel)</strong>: Ist das NAS nicht direkt erreichbar, baut die App mit Ihrer Erlaubnis einen WireGuard-Tunnel zu Ihrem eigenen Router auf. Durch diesen Tunnel läuft ausschließlich der Datenverkehr von KronenManager, nicht der anderer Apps. Der Datenverkehr wird dabei weder ausgewertet noch gespeichert noch an Dritte weitergegeben. Die App baut den Tunnel einige Minuten nach dem Verlassen wieder ab.</li>
+<li><strong>Steuerung von WireGuard-Tunneln</strong> (nur falls statt des eingebauten Tunnels die separate WireGuard-App genutzt wird): Die App bittet die separat installierte WireGuard-App, Ihren eingestellten Tunnel ein- oder auszuschalten, wenn das NAS anders nicht erreichbar ist.</li>
 </ul>
 
 <h2>6. Google Play</h2>
