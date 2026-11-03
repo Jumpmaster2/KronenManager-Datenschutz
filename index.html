@@ -12,7 +12,7 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8rem}
 </head>
 <body>
 <h1>Datenschutzerklärung für die App „KronenManager“</h1>
-<p>Stand: 03.11.2026 (ergänzt um den Zugriff aus anderen Apps über die Android-Dateiauswahl; neue Kontaktadresse)</p>
+<p>Stand: 03.11.2026 (ergänzt um OneDrive und weitere Speicher über Android; zuvor: Zugriff aus anderen Apps über die Android-Dateiauswahl, neue Kontaktadresse)</p>
 
 <h2>1. Worum es geht</h2>
 <p>KronenManager ist ein privater Dateimanager für die Dateien auf dem Handy und für ein eigenes NAS (Netzwerkspeicher) über das SMB-Protokoll. Die App wird nur innerhalb einer Familie genutzt und ist nicht öffentlich im Play Store auffindbar.</p>
@@ -21,7 +21,19 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8rem}
 <p>Verantwortlich ist der im Google Play Store angegebene Entwickler der App. Kontakt: <a href="mailto:Entwicklung@fam-kronen.de">Entwicklung@fam-kronen.de</a></p>
 
 <h2>3. Keine Datenübermittlung an den Entwickler</h2>
-<p>Die App erhebt keine Daten für den Entwickler und überträgt keine Daten an den Entwickler oder an Dritte. Sie enthält keine Werbung, keine Analyse- oder Absturzberichts-Dienste und keine Tracking-Bibliotheken. Netzwerkverbindungen baut die App ausschließlich zu dem NAS auf, das Sie selbst in den Einstellungen eintragen, und – wenn Sie den eingebauten Tunnel nutzen – zu dem WireGuard-Server in Ihrem eigenen Router, den Ihre Konfigurationsdatei angibt.</p>
+<p>Die App erhebt keine Daten für den Entwickler und überträgt keine Daten an den Entwickler oder an Dritte. Sie enthält keine Werbung, keine Analyse- oder Absturzberichts-Dienste und keine Tracking-Bibliotheken. Netzwerkverbindungen baut die App ausschließlich zu dem NAS auf, das Sie selbst in den Einstellungen eintragen, und – wenn Sie den eingebauten Tunnel nutzen – zu dem WireGuard-Server in Ihrem eigenen Router, den Ihre Konfigurationsdatei angibt. Nur wenn Sie selbst OneDrive verbinden, kommen Verbindungen zu Microsoft hinzu (siehe Abschnitt „OneDrive“).</p>
+
+<h2>OneDrive (optional)</h2>
+<p>Sie können in der App Ihr eigenes OneDrive über „OneDrive verbinden“ einbinden. Nur dann und nur für die von Ihnen ausgelösten Aktionen verbindet sich die App mit Microsoft (login.microsoftonline.com, graph.microsoft.com sowie von Microsoft genannte Download- und Upload-Adressen). Microsoft ist dabei Anbieter Ihres OneDrive-Kontos; es gelten die Datenschutzbestimmungen von Microsoft: <a href="https://privacy.microsoft.com/de-de/privacystatement">https://privacy.microsoft.com/de-de/privacystatement</a>.</p>
+<ul>
+<li><strong>Anmeldung</strong>: Sie melden sich im Browser direkt bei Microsoft an. KronenManager erhält Ihr Microsoft-Passwort nicht, sondern nur Zugriffsschlüssel (Tokens) für Ihre Dateien sowie Ihren Anzeigenamen und Ihre E-Mail-Adresse aus dem Microsoft-Profil. Diese werden verschlüsselt mit einem Schlüssel im Android-Keystore nur auf Ihrem Gerät gespeichert.</li>
+<li><strong>Dateizugriffe</strong>: Beim Öffnen von Ordnern, Vorschauen, Herunterladen, Hochladen, Anlegen, Umbenennen, Verschieben, Kopieren und Löschen werden die dafür nötigen Angaben (z. B. Ordner- und Dateinamen, Kennungen, beim Hochladen der Dateiinhalt) an Microsoft übertragen. Hochgeladen wird nur, was Sie selbst nach OneDrive kopieren, verschieben oder teilen – auch vom Handy oder NAS.</li>
+<li><strong>Nicht übertragen</strong> werden NAS-Zugangsdaten, WireGuard-Schlüssel, Ihre übrigen Handy-Dateien oder Nutzungsstatistiken. Die App enthält auch hierfür keine Analyse- oder Werbedienste.</li>
+<li><strong>Abmelden</strong> löscht die gespeicherte Anmeldung auf dem Gerät. Die Freigabe der App können Sie zusätzlich in Ihrem Microsoft-Konto unter „Datenschutz → App-Zugriff“ widerrufen.</li>
+</ul>
+
+<h2>Weitere Speicher über Android</h2>
+<p>Über „Speicher hinzufügen“ können Sie Ordner anderer Apps einbinden, die Android dafür anbietet (z. B. einen WebDAV-Zugang). Der Zugriff läuft über die jeweilige App des Anbieters; KronenManager baut dafür keine eigenen Verbindungen auf. Es gelten die Bestimmungen des jeweiligen Anbieters.</p>
 
 <h2>4. Daten, die nur auf Ihrem Gerät gespeichert werden</h2>
 <ul>
