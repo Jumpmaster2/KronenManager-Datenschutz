@@ -12,13 +12,13 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8rem}
 </head>
 <body>
 <h1>Datenschutzerklärung für die App „KronenManager“</h1>
-<p>Stand: 31.10.2026 (ergänzt um den eingebauten WireGuard-Tunnel und den Zugriff auf Dateien des Handys)</p>
+<p>Stand: 03.11.2026 (ergänzt um den Zugriff aus anderen Apps über die Android-Dateiauswahl; neue Kontaktadresse)</p>
 
 <h2>1. Worum es geht</h2>
 <p>KronenManager ist ein privater Dateimanager für die Dateien auf dem Handy und für ein eigenes NAS (Netzwerkspeicher) über das SMB-Protokoll. Die App wird nur innerhalb einer Familie genutzt und ist nicht öffentlich im Play Store auffindbar.</p>
 
 <h2>2. Verantwortlicher und Kontakt</h2>
-<p>Verantwortlich ist der im Google Play Store angegebene Entwickler der App. Kontakt: <a href="mailto:martin.koedderitzsch@googlemail.com">martin.koedderitzsch@googlemail.com</a></p>
+<p>Verantwortlich ist der im Google Play Store angegebene Entwickler der App. Kontakt: <a href="mailto:Entwicklung@fam-kronen.de">Entwicklung@fam-kronen.de</a></p>
 
 <h2>3. Keine Datenübermittlung an den Entwickler</h2>
 <p>Die App erhebt keine Daten für den Entwickler und überträgt keine Daten an den Entwickler oder an Dritte. Sie enthält keine Werbung, keine Analyse- oder Absturzberichts-Dienste und keine Tracking-Bibliotheken. Netzwerkverbindungen baut die App ausschließlich zu dem NAS auf, das Sie selbst in den Einstellungen eintragen, und – wenn Sie den eingebauten Tunnel nutzen – zu dem WireGuard-Server in Ihrem eigenen Router, den Ihre Konfigurationsdatei angibt.</p>
@@ -33,6 +33,7 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8rem}
 <h2>5. Berechtigungen</h2>
 <ul>
 <li><strong>Zugriff auf alle Dateien</strong> (optional): Damit zeigt die App wie ein Dateimanager die Ordner und Dateien auf Ihrem Handy an und kopiert oder verschiebt sie auf Ihren Wunsch zwischen Handy und NAS. Die App liest, ändert oder löscht Dateien nur, wenn Sie das in der App auslösen. Dateiinhalte und Dateinamen werden nicht ausgewertet und nicht an den Entwickler oder Dritte übertragen, sondern nur zu Ihrem eigenen NAS, wenn Sie Dateien dorthin kopieren.</li>
+<li><strong>Zugriff aus anderen Apps (Android-Dateiauswahl)</strong>: KronenManager erscheint im Dateiauswahldialog von Android, zum Beispiel beim Anhängen einer Datei in einem Messenger oder einer E-Mail-App. Eine andere App erhält dabei nur Zugriff auf die Dateien oder Ordner, die Sie in diesem Dialog selbst auswählen. Über diesen Weg können andere Apps NAS-Dateien lesen sowie neue Dateien und Ordner auf dem NAS anlegen; bestehende Dateien können sie weder überschreiben noch umbenennen, verschieben oder löschen. Was die andere App mit einer ausgewählten Datei macht, etwa sie versenden, richtet sich nach deren Datenschutzbestimmungen. KronenManager selbst überträgt dabei keine Daten an den Entwickler oder Dritte.</li>
 <li><strong>Standort (genau)</strong>: Android gibt den Namen des verbundenen WLANs nur mit dieser Berechtigung heraus. Die App liest damit ausschließlich den WLAN-Namen, um zu erkennen, ob Sie im Heimnetz sind. Ihr Standort wird nicht ermittelt, gespeichert oder übertragen. Die Berechtigung ist optional.</li>
 <li><strong>Netzwerkzugriff und Netzwerkstatus</strong>: für die Verbindung zum NAS und zur Erkennung, ob ein VPN aktiv ist.</li>
 <li><strong>VPN (eingebauter WireGuard-Tunnel)</strong>: Ist das NAS nicht direkt erreichbar, baut die App mit Ihrer Erlaubnis einen WireGuard-Tunnel zu Ihrem eigenen Router auf. Durch diesen Tunnel läuft ausschließlich der Datenverkehr von KronenManager, nicht der anderer Apps. Der Datenverkehr wird dabei weder ausgewertet noch gespeichert noch an Dritte weitergegeben. Die App baut den Tunnel einige Minuten nach dem Verlassen wieder ab.</li>
